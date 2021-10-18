@@ -18,12 +18,21 @@ output_folder_path = f"{os.path.dirname(__file__)}\\{output_folder_name}\\"
 output_file_name = "result.pdf"
 output_file_path = f"{output_folder_path}\\{output_file_name}"
 
-# Create Argument Parser object
+# Create argument parser object
 parser = argparse.ArgumentParser(
-    description="Merge two or more PDF files into one.")
+    description="Merge PDF files into one.")
+
+# Add arguments to the parser
+parser.add_argument('output', metavar="resultFileName",
+                    help="name of resulting pdf file")
+parser.add_argument('input', metavar="pdfToMerge",
+                    nargs="+", help="pdf file to merge")
+
+# Parse the arguments
+args = parser.parse_args()
 
 # Create PDF Merger object
-merger = PdfFileMerger()
+# merger = PdfFileMerger()
 
 # Write the finished PDF to a file
-merger.write(output_folder_path)
+# merger.write(output_folder_path)
