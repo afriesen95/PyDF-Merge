@@ -1,3 +1,10 @@
+#######################################################
+# PyDF-Merge
+# Author: Alexander Friesen
+# Created: October 18th, 2021
+# Description: CLI tool for merging PDF files.
+#######################################################
+
 import os
 from PyPDF2 import PdfFileMerger
 
