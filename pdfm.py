@@ -12,7 +12,7 @@ from PyPDF2 import PdfFileMerger
 
 # Create argument parser object
 parser = argparse.ArgumentParser(
-    description="Merge PDF files into one.")
+    description="PyDF-Merge: CLI tool for merging PDF files.")
 
 # Add arguments to the parser
 parser.add_argument('output', metavar="resultFileName",
