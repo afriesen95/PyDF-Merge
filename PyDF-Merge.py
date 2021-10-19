@@ -16,9 +16,9 @@ parser = argparse.ArgumentParser(
 
 # Add arguments to the parser
 parser.add_argument('output', metavar="resultFileName",
-                    help="name of resulting pdf file")
+                    help="name of resulting PDF file")
 parser.add_argument('input', metavar="pdfToMerge",
-                    nargs="+", help="pdf file to merge")
+                    nargs="+", help="PDF files to merge")
 
 # Parse the arguments
 args = parser.parse_args()
@@ -41,21 +41,25 @@ merger = PdfFileMerger()
 # Append each file
 try:
     for x in args.input:
-        merger.append(x)
+        pdf = x
+        if (not pdf.endswith(".pdf")):
+            pdf += ".pdf"
 
+        merger.append(pdf)
+
+# If, for example, a .txt file has been passed in as an argument, it would become "a.txt.pdf" so it is okay to catch it here
 except FileNotFoundError:
-    # If the input file was not found...
-    print(
-        f"ERROR: \"{x}\" could not be found, double-check the file name and try again.")
+    print(f"ERROR: \"{x}\" does not exist, is corrupt, or is not a PDF file.")
     sys.exit()
 
+# If the input file was not a PDF file...
 except OSError as e:
-    # If the input file was not a PDF file...
     if (e.args[0] == 22):
-        print(f"ERROR: {x} is not a valid PDF file.")
+        print(f"ERROR: \"{x}\" is not a valid PDF file.")
 
-except:
-    print("ERROR: an unknown error has occurred. Please try again.")
+# If anything else went wrong...
+except Exception:
+    print(f"ERROR: an unknown error has occurred, please try again.")
     sys.exit()
 
 # Write the finished PDF to a file
