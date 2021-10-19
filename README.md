@@ -8,5 +8,5 @@ CLI tool for merging PDF files written in Python
 
 ## Usage
 1. Open your terminal of choice to the location of the PDF files to be merged.
-2. Execute the following command:
+2. Use PyDF-Merge as such:
   ```pdfm [-h] resultFileName pdfToMerge [pdfToMerge ...]```
