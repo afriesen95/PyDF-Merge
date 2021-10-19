@@ -7,4 +7,4 @@ CLI tool for merging PDF files written in Python
 3. Add pdfm.py to your PATH.
 
 ## Usage
-pdfm [-h] resultFileName pdfToMerge [pdfToMerge ...]
+```pdfm [-h] resultFileName pdfToMerge [pdfToMerge ...]```
