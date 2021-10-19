@@ -1,5 +1,5 @@
 # PyDF-Merge
-CLI tool for merging PDF files written in Python.
+CLI tool for merging PDF files. Written in Python.
 
 ## Installation
 1. Download the latest release.
