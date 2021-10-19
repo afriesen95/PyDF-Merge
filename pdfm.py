@@ -24,8 +24,8 @@ parser.add_argument('input', metavar="pdfToMerge",
 args = parser.parse_args()
 
 # Define output folder name and build output folder path
-output_folder_name = "Merged PDFs"
-output_folder_path = f"{os.path.dirname(__file__)}\\{output_folder_name}"
+output_folder_name = "PyDF-Merge"
+output_folder_path = f"{os.getcwd()}\\{output_folder_name}"
 
 # Create the output directory
 os.makedirs(output_folder_path, exist_ok=True)
