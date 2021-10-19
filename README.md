@@ -12,4 +12,4 @@ You may need to restart your device at this point.
 ## Usage
 1. Open your terminal of choice to the location of the PDF files to be merged.
 2. Use PyDF-Merge as such: ```pdfm [-h] resultFileName pdfToMerge [pdfToMerge ...]```
-3. The resulting PDF file will be in ```./PyDF-Merge/<filename>.pdf```
+3. The resulting PDF file will be in ```./PyDF-Merge/<resultFileName>.pdf```
