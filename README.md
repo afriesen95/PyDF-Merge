@@ -4,7 +4,7 @@ CLI tool for merging PDF files. Written in Python.
 ## Installation
 1. Download the latest release.
 2. Unzip the release, open your terminal of choice in the folder and run ```pip install -r requirements.txt```
-3. Move the folder to the root of your drive (it can exist anywhere, so long as you do not move it after it adding to your PATH.)
+3. Move the folder to the desired location (it can exist anywhere, so long as you do not move it after it adding to your PATH, and your user has permissions to the folder.)
 4. Add the folder to your PATH.
 
 You may need to restart your device at this point.
